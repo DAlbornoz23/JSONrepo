@@ -19,6 +19,7 @@ app.use(bodyParser.urlencoded({extendend:false}));
 // process.env.PORT lets the port be set by Heroku
 var port = process.env.PORT || 5000;
 let archivos=[];
+
 function ReadFiles(){
 	try{
 	fs.readdir(json_f,(err,files)=>{
@@ -39,7 +40,7 @@ ReadFiles();
 
 
 app.get("/",function(req,res){
-	res.render("index.pug",{"title": "hola", "items": archivos});
+	res.render("index.pug",{"title": "JSON Rest API", "items": archivos});
 
 })
 

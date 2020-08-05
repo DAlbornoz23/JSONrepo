@@ -1,12 +1,26 @@
-html
+doctype html
+html(lang='en')
+  head
+    title #{title}
+    link(rel='stylesheet', href='https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css', integrity='sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX', crossorigin='anonymous')
 
-	head
-		title #{title}
-
-	body
-
-		h1 Archivos JSON en repositorio GitHub
-		ul
-			each item in items
-				li
-					a(href = "/"+item) #{item}
+  body(style={background:'grey'})
+    #container.container(style={background:"white", margin:"5%", 'box-shadow':"10px 10px 20px black"})
+      .row.justify-content-md-center
+        .container
+         .row.justify-content-md-center
+          h1.justify-content-md-center Lista de archivos JSON
+          br
+          br
+        .container
+         .row.justify-content-md-center
+          p Los archivos que se muestran a continuación, se encuentran en un repositorio de Github
+        #data.container
+          .row.justify-content-md-center
+            ul
+              each item in items
+                li
+                  a(href="/"+item) #{item}
+    script(src='https://code.jquery.com/jquery-3.5.1.slim.min.js', integrity='sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj', crossorigin='anonymous')
+    script(src='https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js', integrity='sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN', crossorigin='anonymous')
+    script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/js/bootstrap.min.js', integrity='sha384-XEerZL0cuoUbHE4nZReLT7nx9gQrQreJekYhJD9WNWhH8nEW+0c5qq7aIo2Wl30J', crossorigin='anonymous')
