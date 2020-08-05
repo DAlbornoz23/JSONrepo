@@ -1,0 +1,12 @@
+html
+
+	head
+		title #{title}
+
+	body
+
+		h1 Archivos JSON en repositorio GitHub
+		ul
+			each item in items
+				li
+					a(href = "/"+item) #{item}
