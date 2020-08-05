@@ -7,7 +7,7 @@ const json_f = "/JSONfiles";
 
 // set the port of our application
 // process.env.PORT lets the port be set by Heroku
-var port = process.env.PORT || 8080;
+var port = process.env.PORT || 5000;
 function ReadFiles(){
 	try{
 	fs.readdir(json_f,(err,files)=>{
