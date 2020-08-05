@@ -2,9 +2,8 @@
 var express = require('express');
 var fs = require('fs');
 var app = express();
-var path = require('path');
 
-const json_f = path.join(__dirname+"/JSONfiles");
+const json_f = "/JSONfiles";
 
 // set the port of our application
 // process.env.PORT lets the port be set by Heroku
